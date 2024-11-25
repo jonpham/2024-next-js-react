@@ -1,17 +1,48 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+It has been updated to utilize & bootstrap use of the following Toolkits
+
+- Node package manager: `pnpm` + `nvm`
+- HTTP Server : Next.JS Router
+- UI HTML Rendering: React
+- CSS Framework: TailWind
+- CSS UI Kit: ShadCN/UI
+- http-rest API: NextJS controllers
+- http-rpc API protocol: `tRPC`
+- graph API protocol: `graphql`
+- ORM: Prisma
+- DB: Postgres
+- PaaS: Vercel
+- IaC: Pulumi on AWS
+
+# Verification Tools
+
+- Static Code Analyzer: ESLint
+- Static Code Styler: Prettier
+- Unit: Vitest
+- UI : Storybook
+- API : Step CI
+- E2E: PlayWright
+
+# About Next.JS
+
+Next.JS organizes itself based on project structure and specific reserved filenames. It's initial defaults are close to my personal preferences already, however cannot be changed due to Next's Build expectations [jonpham/2024-boilerplate-react](https://github.com/jonpham/2024-boilerplate-react/issues/20#issue-2685077085t)
+
+See Next.JS's folder and file based routing [here](https://nextjs.org/docs/app/getting-started/project-structure#folder-and-file-conventions).
+
+Beyond those requirements, the following guidance is followed:
+
+1. Co-locate source closest to wherever used. 
+    - (Use closest common parent dir for re-used components)
+2. For global or application-agnostic source use Next's root level.
+3. Organize non-production src code in separate `__*__` folders.
+
 ## Getting Started
 
 First, run the development server:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
 pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
