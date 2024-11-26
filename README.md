@@ -24,6 +24,9 @@ It has been updated to utilize & bootstrap use of the following Toolkits
 - API : Step CI
 - E2E: PlayWright
 
+## Storybook
+Use npx `storybook@latest upgrade` to update before using this starter.
+
 # About Next.JS
 
 Next.JS organizes itself based on project structure and specific reserved filenames. It's initial defaults are close to my personal preferences already, however cannot be changed due to Next's Build expectations [jonpham/2024-boilerplate-react](https://github.com/jonpham/2024-boilerplate-react/issues/20#issue-2685077085t)
