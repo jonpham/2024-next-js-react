@@ -1,0 +1,16 @@
+{
+    "extends": "./tsconfig.next.json",
+    "compilerOptions": {
+        "types": [
+            "@testing-library/jest-dom",
+            "@vitest/browser/providers/playwright"
+        ]
+    },
+    "include": [
+        ".storybook/**/*",
+        "./vitest.setup.ts",
+        "src/**/*",
+        "src/**/__tests__/*.{test,spec}.{ts,tsx}"
+    ],
+    "exclude": []
+}
