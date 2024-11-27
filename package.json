@@ -8,6 +8,7 @@
     "start": "next start",
     "format": "prettier --write ./src",
     "lint": "next lint",
+    "code-check": "next lint && prettier --check ./src",
     "test": "vitest",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"

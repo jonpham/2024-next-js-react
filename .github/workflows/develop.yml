@@ -46,7 +46,7 @@ jobs:
           run_install: true
 
       - name: "🔍 lint code"
-        run: pnpm lint --if-present
+        run: pnpm lint
 
   format:
     name: Code style
@@ -65,4 +65,4 @@ jobs:
           run_install: true
 
       - name: "🔍 lint code"
-        run: pnpm format --if-present
+        run: pnpm code-check
