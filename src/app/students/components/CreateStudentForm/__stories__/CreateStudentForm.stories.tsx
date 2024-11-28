@@ -1,16 +1,19 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { expect, within } from '@storybook/test';
 
-import { HelloWorld } from '../HelloWorld';
+import { CreateStudentForm } from '../CreateStudentForm';
 
 const meta = {
-  title: 'Pages/HelloWorld',
-  component: HelloWorld,
+  title: 'components/CreateStudentForm',
+  component: CreateStudentForm,
   parameters: {
     // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout
     layout: 'fullscreen',
   },
-} satisfies Meta<typeof HelloWorld>;
+  args: {
+    students: []
+  }
+} satisfies Meta<typeof CreateStudentForm>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -19,7 +22,7 @@ type Story = StoryObj<typeof meta>;
 export const Exists: Story = {
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
-    const el = canvas.getByText(/HelloWorld/i, { selector: 'div' });
+    const el = canvas.getByRole('button', { name: 'Create Student' });
     await expect(el).toBeVisible();
   },
 };
