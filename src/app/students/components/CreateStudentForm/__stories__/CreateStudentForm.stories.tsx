@@ -11,8 +11,8 @@ const meta = {
     layout: 'fullscreen',
   },
   args: {
-    students: []
-  }
+    students: [],
+  },
 } satisfies Meta<typeof CreateStudentForm>;
 
 export default meta;

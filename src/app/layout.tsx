@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { inter } from '@/app/style/fonts';
+import { inter } from './style/fonts';
 // import localFont from 'next/font/local';
 import './style/globals.css';
 
@@ -26,11 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${inter.className} antialiased`}
-      >
-        {children}
-      </body>
+      <body className={`${inter.className} antialiased`}>{children}</body>
     </html>
   );
 }
