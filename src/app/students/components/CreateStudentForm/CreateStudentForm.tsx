@@ -1,12 +1,14 @@
 import './CreateStudentForm.css';
 
 import Link from 'next/link';
-import {
-  UserCircleIcon,
-} from '@heroicons/react/24/outline';
+import { UserCircleIcon } from '@heroicons/react/24/outline';
 import Button from './Button';
 
-function CreateStudentForm({ students }: { students: { id: string, name: string }[]}) {
+function CreateStudentForm({
+  students,
+}: {
+  students: { id: string; name: string }[];
+}) {
   return (
     <form>
       <div className="rounded-md bg-gray-50 p-4 md:p-6">

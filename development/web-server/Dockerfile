@@ -5,7 +5,9 @@ RUN corepack enable
 RUN pnpm install
 COPY ./.env.docker ./.env.local
 COPY ./.nvmrc ./*.ts ./*.m?s ./*.yaml ./
-COPY ./.storybook ./public ./src ./
+COPY ./.storybook ./.storybook/
+COPY  ./public ./public/
+COPY  ./src ./src/
 # Development HTTP Port
 EXPOSE 3000 
 # Start Server for Development
