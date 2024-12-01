@@ -1,0 +1,49 @@
+// schema.prisma
+// Provides definitions alternative to typescript types 
+// See @/app/lib/definitions.ts
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgres"
+  url = env("POSTGRES_LOCAL_PRISMA_URL") // uses connection pooling
+  directUrl = env("POSTGRES_LOCAL_URL_NON_POOLING") // uses a direct connection
+}
+
+model Customer {
+    id String @default(cuid()) @id
+    userId String?
+    name String
+    email String @unique
+    imgURL String
+    invoices Invoice[]
+}
+
+enum InvoiceStatus {
+    PENDING
+    PAID
+}
+
+model Invoice {
+    id String @default(cuid()) @id
+    customer Customer? @relation(fields: [customerId], references: [id])
+    customerId String?
+    status InvoiceStatus
+    amount Decimal
+    date DateTime
+}
+
+model Revenue {
+    month String @id
+    revenue Decimal
+}
+
+model User {
+  id            String       @default(cuid()) @id
+  name          String?
+  password      String?
+  email         String?   @unique
+  @@map(name: "users")
+}
