@@ -1,7 +1,7 @@
-import { shimmer } from "@/app/style/loadingShimmer";
-import { CardSkeleton } from "./CardSkeleton";
-import RevenueChartSkeleton from "./RevenueChartSkeleton";
-import LatestInvoicesSkeleton from "./InvoiceSkeleton";
+import { shimmer } from '@/app/style/loadingShimmer';
+import { CardSkeleton } from './CardSkeleton';
+import RevenueChartSkeleton from './RevenueChartSkeleton';
+import LatestInvoicesSkeleton from './InvoiceSkeleton';
 
 function DashboardSkeleton() {
   return (

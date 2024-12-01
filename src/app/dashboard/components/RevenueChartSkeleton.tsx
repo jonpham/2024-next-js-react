@@ -1,4 +1,4 @@
-import { shimmer } from "@/app/style/loadingShimmer";
+import { shimmer } from '@/app/style/loadingShimmer';
 
 function RevenueChartSkeleton() {
   return (
