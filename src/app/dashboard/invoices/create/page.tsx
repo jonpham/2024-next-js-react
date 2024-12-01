@@ -1,10 +1,10 @@
 import { fetchCustomers } from '@/app/lib/data';
 import Breadcrumbs from '../components/breadcrumbs';
 import Form from '../components/create-form';
- 
+
 export default async function Page() {
   const customers = await fetchCustomers();
- 
+
   return (
     <main>
       <Breadcrumbs

@@ -18,7 +18,7 @@ async function InvoicePage(props: {
   const currentPage = Number(searchParams?.page) || 1;
 
   const totalPages = await fetchInvoicesPages(query);
- 
+
   return (
     <div className="w-full">
       <div className="flex w-full items-center justify-between">
