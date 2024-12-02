@@ -6,6 +6,7 @@ import AcmeLogo from './components/AcmeLogo';
 import { lusitana } from './style/fonts';
 import styles from './style/home.module.css';
 
+/** Automatically redirects if redirect config set in `next.config.ts` */
 export default function Home() {
   return (
     <>
