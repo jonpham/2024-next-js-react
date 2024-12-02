@@ -5,7 +5,7 @@ import prisma from '@/app/lib/prisma';
 
 export default async function Page() {
   // This is a server-only behavior
-  const students: Student[] = await prisma?.student.findMany() || [];
+  const students: Student[] = (await prisma?.student.findMany()) || [];
 
   return (
     <main className="flex min-h-screen flex-col p-6">

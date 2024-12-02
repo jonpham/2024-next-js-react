@@ -1,6 +1,6 @@
 import type { Student } from '@prisma/client';
 
-function StudentList(props: { students : Student[]}) {
+function StudentList(props: { students: Student[] }) {
   return (
     <table>
       <thead className={`text-left`}>
