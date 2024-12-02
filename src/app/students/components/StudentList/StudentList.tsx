@@ -1,4 +1,5 @@
 import type { Student } from '@prisma/client';
+import Link from 'next/link';
 
 function StudentList(props: { students: Student[] }) {
   return (
@@ -13,7 +14,13 @@ function StudentList(props: { students: Student[] }) {
       <tbody className={`text-left`}>
         {props.students.map((student) => (
           <tr key={student.id}>
-            <td>{student.first_name}</td>
+            <td>
+              <Link href={`/students/${student.id}`}
+                    className="text-blue-600 hover:underline"
+              >
+                {student.first_name}
+              </Link>
+            </td>
             <td>{student.last_name}</td>
             <td>{student.check_in_time.toUTCString()}</td>
           </tr>
