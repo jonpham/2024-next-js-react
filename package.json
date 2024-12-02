@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "dev:docker": "docker compose --env-file ./.env.test -f ./development/docker-compose.yaml up -d",
-    "dev:docker:down": "docker compose -f ./development/docker-compose.yaml down",
+    "dev:docker": "docker compose up -d",
+    "dev:docker:down": "docker compose down",
     "build": "next build",
     "start": "next start",
     "format": "prettier --write ./src",
