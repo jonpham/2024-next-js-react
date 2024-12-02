@@ -4,6 +4,7 @@ import StudentList from '../components/StudentList';
 import prisma from '@/app/lib/prisma';
 
 export default async function Page() {
+  // This is a server-only behavior
   const students: Student[] = await prisma?.student.findMany() || [];
 
   return (
@@ -18,9 +19,9 @@ export default async function Page() {
           <p
             className={`text-lg  text-gray-1000 md:text-3lg md:leading-normal`}
           >
-            <strong>Create or Edit a Student</strong>
+            <strong>Create a Student</strong>
           </p>
-          <CreateStudentForm students={students} />
+          <CreateStudentForm />
         </div>
         <div className="flex items-center justify-center p-6 md:w-3/5 md:px-28 md:py-12">
           {/* Add Hero Images Here */}
