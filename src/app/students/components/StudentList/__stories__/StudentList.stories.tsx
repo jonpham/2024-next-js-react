@@ -19,14 +19,14 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const janeDoe: Student =  {
+const janeDoe: Student = {
   id: 'id1',
   first_name: 'Jane',
   last_name: 'Doe',
   check_in_time: new Date(2024, 10, 1, 12),
 };
 
-const jimLee: Student =  {
+const jimLee: Student = {
   id: 'id2',
   first_name: 'Jim',
   last_name: 'Lee',
@@ -40,9 +40,7 @@ export const SingleStudent: Story = {
     await expect(el).toBeVisible();
   },
   args: {
-    students: [
-      janeDoe 
-    ],
+    students: [janeDoe],
   },
 };
 
@@ -53,9 +51,6 @@ export const MultipleStudents: Story = {
     await expect(el).toBeVisible();
   },
   args: {
-    students: [
-      janeDoe,
-      jimLee
-    ],
+    students: [janeDoe, jimLee],
   },
 };

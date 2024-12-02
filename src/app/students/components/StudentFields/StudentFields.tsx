@@ -5,11 +5,7 @@ import { UserCircleIcon } from '@heroicons/react/24/outline';
 import Button from '../Button';
 import { Student } from '@prisma/client';
 
-function StudentFields({
-  students,
-}: {
-  students: Student[];
-}) {
+function StudentFields({ students }: { students: Student[] }) {
   return (
     <form>
       <div className="rounded-md bg-gray-50 p-4 md:p-6">
