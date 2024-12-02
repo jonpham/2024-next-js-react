@@ -8,6 +8,7 @@ async function InvoiceCards() {
     numberOfInvoices,
     numberOfCustomers,
   } = await fetchCardData();
+  
   return (
     <>
       <Card title="Collected" value={totalPaidInvoices} type="collected" />

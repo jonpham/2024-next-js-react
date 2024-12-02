@@ -3,11 +3,12 @@ import './CreateStudentForm.css';
 import Link from 'next/link';
 import { UserCircleIcon } from '@heroicons/react/24/outline';
 import Button from './Button';
+import { Student } from '@prisma/client';
 
 function CreateStudentForm({
   students,
 }: {
-  students: { id: string; name: string }[];
+  students: Student[];
 }) {
   return (
     <form>
@@ -29,7 +30,7 @@ function CreateStudentForm({
               </option>
               {students.map((student) => (
                 <option key={student.id} value={student.id}>
-                  {student.name}
+                  {`${student.first_name} ${student.last_name}`}
                 </option>
               ))}
             </select>
