@@ -13,8 +13,8 @@ datasource db {
 }
 
 model Student {
-    id String @id
-    first_name String
+    id String @default(cuid()) @id
+    first_name String @unique
     last_name String
     check_in_time DateTime
 }
