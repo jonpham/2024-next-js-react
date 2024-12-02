@@ -12,38 +12,9 @@ datasource db {
   directUrl = env("POSTGRES_LOCAL_URL_NON_POOLING") // uses a direct connection
 }
 
-model Customer {
-    id String @default(cuid()) @id
-    userId String?
-    name String
-    email String @unique
-    imgURL String
-    invoices Invoice[]
-}
-
-enum InvoiceStatus {
-    PENDING
-    PAID
-}
-
-model Invoice {
-    id String @default(cuid()) @id
-    customer Customer? @relation(fields: [customerId], references: [id])
-    customerId String?
-    status InvoiceStatus
-    amount Decimal
-    date DateTime
-}
-
-model Revenue {
-    month String @id
-    revenue Decimal
-}
-
-model User {
-  id            String       @default(cuid()) @id
-  name          String?
-  password      String?
-  email         String?   @unique
-  @@map(name: "users")
+model Student {
+    id String @id
+    first_name String
+    last_name String
+    check_in_time DateTime
 }
