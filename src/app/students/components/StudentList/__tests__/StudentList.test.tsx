@@ -33,13 +33,13 @@ describe('StudentList', () => {
   );
 
   it.each([
-    janeDoe.first_name,
-    janeDoe.last_name,
-    janeDoe.check_in_time.toUTCString(),
-  ])(`should have %s data value in row`, (val) => {
+    [janeDoe.first_name, 'a'],
+    [janeDoe.last_name, 'td'],
+    [janeDoe.check_in_time.toUTCString(), 'td'],
+  ])(`should have %s data value in row`, (val, selector) => {
     // Arrange / Given a Setup
     render(<StudentList students={students} />);
-    const dataPt = screen.getByText(val, { selector: 'td', exact: false });
+    const dataPt = screen.getByText(val, { selector, exact: false });
     // Assert on Expectations
     expect(dataPt).toBeVisible();
   });
