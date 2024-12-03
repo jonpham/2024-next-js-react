@@ -8,6 +8,7 @@
     "dev:docker:down": "docker compose down",
     "prisma:generate": "prisma generate",
     "prisma:dev:reset": "prisma migrate reset",
+    "prisma:dev:migrate": "prisma migrate",
     "prisma:studio": "prisma studio",
     "build": "next build",
     "start": "next start",

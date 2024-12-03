@@ -4,7 +4,7 @@ services:
   #     context: ..
   #     dockerfile: ./development/web-server/Dockerfile
   #   ports:
-  #     - "$HTTP_PORT:3000"
+  #     - "$HTTP_PORT:3001"
   #   depends_on:
   #     - postgres
   #   environment:

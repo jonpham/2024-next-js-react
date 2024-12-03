@@ -27,6 +27,16 @@ It has been updated to utilize & bootstrap use of the following Toolkits
 ## Storybook
 Use npx `storybook@latest upgrade` to update before using this starter.
 
+# Development
+
+## Database
+For local development, the docker-compose cluster must be up and running before using `pnpm dev` which provides a local postgres DB.
+
+To run it should be `pnpm dev:docker`
+
+### Resetting already running database
+Run `pnpm prisma:dev:reset` to clear database
+
 # About Next.JS
 
 Next.JS organizes itself based on project structure and specific reserved filenames. It's initial defaults are close to my personal preferences already, however cannot be changed due to Next's Build expectations [jonpham/2024-boilerplate-react](https://github.com/jonpham/2024-boilerplate-react/issues/20#issue-2685077085t)

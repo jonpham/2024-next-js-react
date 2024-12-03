@@ -11,7 +11,7 @@ async function main() {
     return {
       id: crypto.randomUUID(),
       first_name: faker.person.firstName(),
-      last_name: faker.person.lastName(),
+      last_name: `SEED_${faker.person.lastName()}`,
       check_in_time: faker.date.recent({ days: 7 }),
     };
   });
