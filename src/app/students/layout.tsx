@@ -1,4 +1,4 @@
-import { PropsWithChildren } from "react";
+import { PropsWithChildren } from 'react';
 
 function StudentViewLayout({ children }: PropsWithChildren) {
   return (
@@ -16,4 +16,3 @@ function StudentViewLayout({ children }: PropsWithChildren) {
 }
 
 export { StudentViewLayout as default };
-

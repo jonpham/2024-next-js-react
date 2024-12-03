@@ -22,7 +22,7 @@ type Story = StoryObj<typeof meta>;
 export const Exists: Story = {
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
-    const el = canvas.getByRole('button', { name: 'Create Student' });
+    const el = canvas.getByRole('button', { name: 'Add Student' });
     await expect(el).toBeVisible();
   },
 };

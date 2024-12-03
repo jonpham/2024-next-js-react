@@ -7,7 +7,7 @@ describe('CreateStudentForm', () => {
   it('should have btn to create student', () => {
     // Arrange / Given a Setup
     render(<CreateStudentForm />);
-    const btn = screen.queryByRole('button', { name: 'Create Student' });
+    const btn = screen.queryByRole('button', { name: 'Add Student' });
     // Assert on Expectations
     expect(btn).not.toBeDisabled();
   });
