@@ -15,14 +15,15 @@ function StudentList(props: { students: Student[] }) {
         {props.students.map((student) => (
           <tr key={student.id}>
             <td>
-              <Link href={`/students/${student.id}`}
-                    className="text-blue-600 hover:underline"
+              <Link
+                href={`/students/${student.id}`}
+                className="text-blue-600 hover:underline"
               >
                 {student.first_name}
               </Link>
             </td>
             <td>{student.last_name}</td>
-            <td>{student.check_in_time.toUTCString()}</td>
+            <td>{new Date(student.check_in_time).toUTCString()}</td>
           </tr>
         ))}
       </tbody>
