@@ -1,4 +1,4 @@
-import { ToDo } from '@prisma/client';
+import { Todo } from '@prisma/client';
 import CreateToDoForm from '../components/CreateToDoForm';
 import ToDoList from '../components/ToDoList';
 import todoservice from '@/app/services/todo';
@@ -7,7 +7,7 @@ export default async function Page() {
   /** NOTE:
    * This exemplifies a direct server component fetch using PRISMA client
    */
-  const todos: ToDo[] | undefined | null = await todoservice.getAll();
+  const todos: Todo[] | undefined | null = await todoservice.getAll();
 
   return (
     <>
