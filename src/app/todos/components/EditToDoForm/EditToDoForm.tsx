@@ -2,11 +2,11 @@ import './EditToDoForm.css';
 
 import Link from 'next/link';
 import Button from '../Button';
-import { ToDo } from '@prisma/client';
+import { Todo } from '@prisma/client';
 import ToDoList from '../ToDoList';
 import { deleteToDo, upsertToDo } from './serverAction';
 
-function EditToDoForm({ todo }: { todo: ToDo }) {
+function EditToDoForm({ todo }: { todo: Todo }) {
   /** NOTE:
    * This exemplifies a direct server component UPDATE using PRISMA client
    */
@@ -27,19 +27,10 @@ function EditToDoForm({ todo }: { todo: ToDo }) {
             <div className="relative mt-2 rounded-md" id="name">
               <div className="relative">
                 <input
-                  id="first-name"
-                  name="first-name"
+                  id="task"
+                  name="task"
                   type="string"
-                  defaultValue={todo.first_name}
-                  className="peer block w-full rounded-md border border-gray-200 py-2 pl-10 text-sm outline-2 placeholder:text-gray-500"
-                />
-              </div>
-              <div className="relative">
-                <input
-                  id="last-name"
-                  name="last-name"
-                  type="string"
-                  defaultValue={todo.last_name}
+                  defaultValue={todo.task}
                   className="peer block w-full rounded-md border border-gray-200 py-2 pl-10 text-sm outline-2 placeholder:text-gray-500"
                 />
               </div>

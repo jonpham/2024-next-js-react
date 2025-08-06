@@ -1,14 +1,15 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { expect, within } from '@storybook/test';
 
-import { ToDo } from '@prisma/client';
+import { Todo } from '@prisma/client';
 import { EditToDoForm } from '../EditToDoForm';
 
-const janeDoe: ToDo = {
+const janeDoe: Todo = {
   id: 'id1',
-  first_name: 'Jane',
-  last_name: 'Doe',
-  check_in_time: new Date(2024, 10, 1, 12),
+  task: 'Jane',
+  created: new Date(2024, 10, 1, 12),
+  completed: false,
+  end: null,
 };
 
 const meta = {

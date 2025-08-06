@@ -1,15 +1,16 @@
 import { render, screen } from '@/testing/utility';
 import { describe, expect, it } from 'vitest';
 
-import { ToDo } from '@prisma/client';
+import { Todo } from '@prisma/client';
 import { EditToDoForm } from '../EditToDoForm';
 
 describe('EditToDoForm', () => {
-  const janeDoe: ToDo = {
+  const janeDoe: Todo = {
     id: 'id1',
-    first_name: 'Jane',
-    last_name: 'Doe',
-    check_in_time: new Date(2024, 10, 1, 12),
+    task: 'Jane',
+    created: new Date(2024, 10, 1, 12),
+    completed: false,
+    end: null,
   };
 
   it('should have btn to submit updates to todo', () => {

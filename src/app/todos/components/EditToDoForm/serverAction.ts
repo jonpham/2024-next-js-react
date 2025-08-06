@@ -1,15 +1,15 @@
 'use server';
 
 import todoservice from '@/app/services/todo';
-import { ToDo } from '@prisma/client';
+import { Todo } from '@prisma/client';
 import { revalidatePath } from 'next/cache';
 import { redirect } from 'next/navigation';
 
-async function upsertToDo(todo: ToDo, formData: FormData) {
+async function upsertToDo(todo: Todo, formData: FormData) {
   const formFirstName = formData.get('first-name')?.toString();
   const formLastName = formData.get('last-name')?.toString();
 
-  const todoFromForm: Omit<ToDo, 'check_in_time'> = {
+  const todoFromForm: Omit<Todo, 'check_in_time'> = {
     ...todo,
     ...(formFirstName ? { first_name: formFirstName } : {}),
     ...(formLastName ? { last_name: formLastName } : {}),

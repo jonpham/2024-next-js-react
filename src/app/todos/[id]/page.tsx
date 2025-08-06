@@ -1,5 +1,5 @@
 import { apiClient } from '@/app/services/todo';
-import { ToDo } from '@prisma/client';
+import { Todo } from '@prisma/client';
 import Link from 'next/link';
 import EditToDoForm from '../components/EditToDoForm';
 
@@ -10,7 +10,7 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
   /** NOTE:
    * This exemplifies a API Path fetch from server component fetch using PRISMA client
    */
-  const todo: ToDo | string = await apiClient.getById(id);
+  const todo: Todo | string = await apiClient.getById(id);
 
   return (
     <>
