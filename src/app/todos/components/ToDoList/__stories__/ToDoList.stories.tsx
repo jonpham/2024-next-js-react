@@ -38,7 +38,7 @@ const jimLee: Todo = {
 export const SingleToDo: Story = {
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
-    const el = canvas.getByText(janeDoe.task, { selector: 'td' });
+    const el = canvas.getByText(janeDoe.task, { selector: 'td a' });
     await expect(el).toBeVisible();
   },
   args: {
@@ -49,7 +49,7 @@ export const SingleToDo: Story = {
 export const MultipleToDos: Story = {
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
-    const el = canvas.getByText(jimLee.task, { selector: 'td' });
+    const el = canvas.getByText(jimLee.task, { selector: 'td a' });
     await expect(el).toBeVisible();
   },
   args: {
