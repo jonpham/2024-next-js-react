@@ -32,9 +32,8 @@ export default function Home() {
             >
               <span>Log in</span> <ArrowRightIcon className="w-5 md:w-6" />
             </Link>
-            <Link href="/students">
-              <span>Student Data</span>{' '}
-              <ArrowRightIcon className="w-5 md:w-6" />
+            <Link href="/todos">
+              <span>ToDo Data</span> <ArrowRightIcon className="w-5 md:w-6" />
             </Link>
           </div>
           <div className="flex items-center justify-center p-6 md:w-3/5 md:px-28 md:py-12">
