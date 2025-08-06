@@ -8,8 +8,8 @@ generator client {
 
 datasource db {
   provider = "postgres"
-  url = env("POSTGRES_LOCAL_PRISMA_URL") // uses connection pooling
-  directUrl = env("POSTGRES_LOCAL_URL_NON_POOLING") // uses a direct connection
+  url = env("POSTGRES_URL") // uses connection pooling
+  directUrl = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
 }
 
 model Todo {
