@@ -10,7 +10,7 @@
     "prisma:dev:reset": "prisma migrate reset",
     "prisma:dev:migrate": "prisma migrate dev",
     "prisma:studio": "prisma studio",
-    "build": "next build",
+    "build": "prisma generate && prisma migrate deploy && next build",
     "start": "next start",
     "format": "prettier --write ./src",
     "lint": "next lint",
