@@ -14,6 +14,6 @@ test('has header', async ({ page }) => {
 
   // Check for header
   await expect(
-    page.getByText('Welcome to Student Catalog', { exact: false })
+    page.getByText('Welcome to ToDo Catalog', { exact: false })
   ).toBeVisible();
 });

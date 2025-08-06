@@ -12,9 +12,10 @@ datasource db {
   directUrl = env("POSTGRES_LOCAL_URL_NON_POOLING") // uses a direct connection
 }
 
-model Student {
+model Todo {
     id String @default(cuid()) @id
-    first_name String @unique
-    last_name String
-    check_in_time DateTime
+    task String @unique
+    completed Boolean
+    created DateTime
+    end DateTime?
 }

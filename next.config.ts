@@ -3,10 +3,10 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   async redirects() {
     return [
-      // Direct Index to Student
+      // Direct Index to ToDo
       {
         source: '/',
-        destination: '/students',
+        destination: '/todos',
         permanent: true,
       },
     ]
