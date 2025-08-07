@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-const DEVELOPMENT_SERVER_URL = 'http://localhost:3000';
+const DEVELOPMENT_SERVER_URL = process.env.BASE_URL || 'http://localhost:3000';
 
 test('has title', async ({ page }) => {
   await page.goto(DEVELOPMENT_SERVER_URL);
